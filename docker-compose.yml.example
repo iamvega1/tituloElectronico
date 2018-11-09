@@ -1,0 +1,24 @@
+version: "3.5"
+
+services:
+  web:
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+#      - ./application:/usr/src/app
+      - ./application/public:/usr/src/app/public/compartido
+    environment:
+      MYSQL_HOST: changeme
+      MYSQL_PORT: changeme
+      MYSQL_USER: changeme
+      MYSQL_PASSWORD: changeme
+      MYSQL_DB: changeme
+      SMTP_USERNAME: changeme
+      SMTP_PASSWORD: changeme
+      GOOGLE_CLIENT_ID: changeme
+      GOOGLE_CLIENT_SECRET: changeme
+      TOKEN_SECRET: chengeme
+      SMTP_FROM: Edulink
+      BASE_URL: changeme
+    
